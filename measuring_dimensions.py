@@ -18,7 +18,7 @@ import csv
 
 ProjDir = input('Hello there! Please, input the full address of the directory where the map images are located. For example, "c:\\Users\\username\\Desktop\\projfolder\\"... ')
 
-os.chdir('c:\\Users\\m7627\\Desktop\\9.04.2022\\Рукокрылые\\PhD\\Chapter 1\\Pictures for Misha\\')
+os.chdir(ProjDir)
 
 
 FORMAT = input('Input the format of the map images (jpg or png): ')
