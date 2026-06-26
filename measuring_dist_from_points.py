@@ -16,7 +16,7 @@ ProjDir = input('Hello there! Please, input the full address of the directory wh
 
 os.chdir(ProjDir)
 
-MapFileName = input('Input the name of the map file (without extension): ')
+MapFileName = input('Input the name of the .pkl file (without extension): ')
 
 MaxNumOfEntrances = 1
 
@@ -30,8 +30,8 @@ OutputData = {"cave/bunkeri": [], "Bat N" : [], "Distance" : []}
 assert os.path.isfile(MapFileName+'.xlsx'), "there is no file with coordinates"
 CoordFile = pd.read_excel(MapFileName+'.xlsx')
 Bats = []
-for i in range(2, len(CoordFile["first coordinate"])):
-    Bats.append([int(CoordFile["second coordinate"][i]), int(CoordFile["first coordinate"][i])])
+for i in range(len(CoordFile["first coordinate"])):
+    Bats.append([int(CoordFile["first coordinate"][i]), int(CoordFile["second coordinate"][i])])
 
 
 ############### Getting the picture in 'npy format and 

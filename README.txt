@@ -1,6 +1,16 @@
 This code is designed to compute various dimension characteristics of bat shelters. Below is a short step by step description of how it works. All the programs were tested on computers with Windows OS.
 
+The script is contained in 3 python files; below is the description of each of them.
 
+
+*** metfun.py ***
+
+This file contains auxiliary python functions
+
+
+*** measuring_dimensions.py ***
+
+This file contains the script that precomputes area, perimeter and distances to entrances in a bat shelter. Here is a brief description of the order of its operation.
 
 1. The code accept raster images with 2D maps of bat shelters as an input. The images must be placed in a specific directory; the user will be asked to indicate the full address to the directory (Windows OS is assumed to be used here) and the format of the images (.jpg or .png). The directory may contain other files, however, the program will try to analyze all the files of the indicated format.
 
@@ -42,6 +52,17 @@ This function precomputes the distances from the seed to all the other points in
 13. The program will run through all the files of the indicated format inside the indicated directory. After the program finishes it outputs an .xlsx file with the results of the computations: for each map the file contains the area, the perimeter and the distance to the farthest point.
 
 
+*** measuring_dist_from_points.py ***
 
+This script is responsible for measuring the distances between points where the bats are located and the nearest entrance to each of the points. Here is a brief description of its working order.
 
+1. This script uses the output of measuring_dimensions.py which are expected to be stored in a .pkl file. The user is asked to input the path to the same directory as was used for the measuring_dimensions.py script and the name of the .pkl file without extension.
+
+2. It is also expected that an .xlsx with bats coordinates is prepared. The file must be named in the same way as the .pkl file and placed in the directory indicated above. The file must have two columns name "first coordinate" and "second coordinate". Entries of these columns correspond to coordinates of the points from which the distances will be measured.
+
+3. The coordinates must be indicated in the same order and the same coordinate system that was used in measuring_dimensions.py. That is, the coordinates [i,j] mean the amount of pixels one must go down (this is i) and right (this is j) to reach the point starting from the top left corner on the image file used to make computations in measuring_dimensions.py. There are several ways to retrieve these coordinates: the easiest way is to mark the points in the same way the entrances were marked in measuring_dimensions.py and then use the same algorithm as in measuring_dimensions.py to find them and retrieve the coordinates. We leave the user to implementing it themself.
+
+4. After the script received the input it starts making the computations which are now pretty routine as most of the distances and trajectories are already precomputed.
+
+5. After the computations are done the script will create the file "edited_..." with bats and trajectories (optional) highlighted and the output ..._distances.xlsx with the distances computed.
 
