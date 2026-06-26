@@ -1,4 +1,6 @@
-This code is designed to compute various dimension characteristics of bat shelters. Below is a short step by step description of how it works.
+This code is designed to compute various dimension characteristics of bat shelters. Below is a short step by step description of how it works. All the programs were tested on computers with Windows OS.
+
+
 
 1. The code accept raster images with 2D maps of bat shelters as an input. The images must be placed in a specific directory; the user will be asked to indicate the full address to the directory (Windows OS is assumed to be used here) and the format of the images (.jpg or .png). The directory may contain other files, however, the program will try to analyze all the files of the indicated format.
 
