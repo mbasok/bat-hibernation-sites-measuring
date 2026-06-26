@@ -17,7 +17,7 @@ This file contains the script that precomputes area, perimeter and distances to 
 2. The program reads image files in RGB format, that is, it creates a two dimensional array with RGB coordinate vectors and entries and works with this array. The image files must be prepared in advance. They must contain:
   - the map of the shelter; each pixel of the map must have color different from white (that is, RGB coordinate vector must be different from [255,255,255]).
   - the entrances marked by a specific color; this color should not occur anywhere else on the image.
-  - the scale line: a horizontal line outside of the map indicating the 1 meter distance. The pixels of the line must be of a specific color that does not occur anywhere else.
+  - the scale line: a horizontal line outside of the map indicating the 1 meter distance. The pixels of the line must be of a specific color that does not occur anywhere else. An example of such a file can be found in the repository.
 
 3. After the working directory address and the format of the files were received, the program starts analyzing all the files in the working directory one by one. Each time it finds a file it tries to find a .pkl file inside the directory "WorkingDirectory\\Pickles\\" with the same name as the image file. The .pkl file is supposed to store the results of the computations applied to this image file previously; if the program finds the .pkl file, it will suggest to use it; after the computations are done, the program will create a .pkl file or rewrite the existing one. If the .pkl file is found, but the data in this file is incomplete, the program will make the necessary computations.
 
