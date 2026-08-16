@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+
+title: "Code accompanying: Hibernation site dimensions influence bat abundance and diversity in the boreal zone"
+
+authors:
+  - family-names: "Matlova"
+    given-names: "Mariia"
+    orcid: "https://orcid.org/0009-0009-1631-1296"
+
+  - family-names: "Blomberg"
+    given-names: "Anna"
+    orcid: "https://orcid.org/0000-0002-6754-4948"
+
+  - family-names: "Tidenberg"
+    given-names: "Eeva-Maria"
+    orcid: "https://orcid.org/0000-0003-4882-2452"
+
+  - family-names: "Basok"
+    given-names: "Mikhail"
+    orcid: "https://orcid.org/0000-0002-1843-7425"
+
+  - family-names: "Lilley"
+    given-names: "Thomas"
+    orcid: "https://orcid.org/ 0000-0001-5864-4958"
+
+  - family-names: "Fjelldal"
+    given-names: "Mari"
+    orcid: "https://orcid.org/0000-0001-6642-906X"
+
+version: 1.0.1
+date-released: 2026-08-17
+type: software
+license: MIT
+
+repository-code: "https://github.com/mbasok/bat-hibernation-sites-measuring"
+
+abstract: "Code used to produce the measurements presented in the accompanying research paper."
